@@ -1,19 +1,16 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Debate Master",
     "version": "1.0",
-    "permissions": ["activeTab", "https://icanhazdadjoke.com/"],
+    "permissions": ["activeTab", "contextMenus", "scripting"],
+    "host_permissions": ["https://icanhazdadjoke.com/"],
     "background": {
-        "scripts": ["dist/background/background.js"],
-        "persistent": false
+        "service_worker": "dist/background/background.js"
     },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
             "js": ["dist/content/content.js"]
         }
-    ],
-    "browser_action": {
-        "default_title": "Debate Master"
-    }
+    ]
 }

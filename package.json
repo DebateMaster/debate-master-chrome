@@ -7,6 +7,7 @@
     "llm",
     "logic"
   ],
+  "type": "module",
   "author": {
     "name": "Andrei Kozyrev & Ivan Klimov"
   },

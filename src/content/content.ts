@@ -20,9 +20,11 @@ function fetchJoke() {
     xhr.send();
 }
 
-document.addEventListener('mouseup', function(_event) {
+function mainNode() {
     const selection = window.getSelection()?.toString().trim();
     if (selection && selection.length > 0) {
         fetchJoke();
     }
-});
+}
+
+mainNode();
