@@ -26,7 +26,3 @@ jobs:
         run: npm ci
       - name: Run tests and check coverage
         run: npm run cover:check
-      - name: Report the results to Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
