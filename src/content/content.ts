@@ -8,6 +8,22 @@ function replaceSelectionWithJoke(joke: string): void {
     }
 }
 
+function highlightSelection(selection: Selection, range: Range, color: string) {
+    if (!selection || !range) {
+        console.log('Invalid input');
+        return;
+    }
+  
+    const span = document.createElement('span');
+    span.style.backgroundColor = color;
+  
+    try {
+        range.surroundContents(span);
+    } catch(e) {
+        console.log('Invalid range', e);
+    }
+}
+
 function fetchJoke() {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -21,8 +37,9 @@ function fetchJoke() {
 }
 
 function mainNode() {
-    const selection = window.getSelection()?.toString().trim();
-    if (selection && selection.length > 0) {
+    const selection = window.getSelection();
+    const text = selection?.toString();
+    if (selection && text && text.length > 0) {
         fetchJoke();
     }
 }
