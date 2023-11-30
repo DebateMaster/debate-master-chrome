@@ -3,7 +3,7 @@
     "name": "Debate Master",
     "version": "1.0",
     "permissions": ["activeTab", "contextMenus", "scripting"],
-    "host_permissions": ["https://icanhazdadjoke.com/"],
+    "host_permissions": ["http://34.85.198.249:12023/*"],
     "background": {
         "service_worker": "dist/background/background.js"
     },
