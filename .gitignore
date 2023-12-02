@@ -6,4 +6,4 @@ node_modules/
 
 # Project files:
 *.sublime-*
-.DS_Store
+**/.DS_Store
