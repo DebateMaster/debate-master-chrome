@@ -12,5 +12,11 @@
             "matches": ["<all_urls>"],
             "js": ["dist/content/content.js"]
         }
-    ]
+    ],
+    "icons": {
+        "16": "etc/img/logo_16x16.png",
+        "32": "etc/img/logo_32x32.png",
+        "48": "etc/img/logo_48x48.png",
+        "128": "etc/img/logo_128x128.png"
+    }
 }
