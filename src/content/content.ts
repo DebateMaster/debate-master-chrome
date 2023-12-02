@@ -42,8 +42,9 @@ function sendSentenceRequest(sentence: string) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             const response = JSON.parse(xhr.responseText);
-            const category = response['prediction'];
-            showPopup(true, category);
+            const category = response['category'];
+            const prediction = response['prediction'];
+            showPopup(prediction, category);
         }
     };
 

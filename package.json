@@ -7,7 +7,6 @@
     "llm",
     "logic"
   ],
-  "type": "module",
   "author": {
     "name": "Andrei Kozyrev & Ivan Klimov"
   },
@@ -60,6 +59,7 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.252",
-    "sitka": "^1.1.1"
+    "sitka": "^1.1.1",
+    "xhr2": "^0.2.1"
   }
 }
